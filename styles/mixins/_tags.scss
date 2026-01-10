@@ -1,0 +1,12 @@
+@import '../variables';
+
+@mixin tag($bg-color, $text-color, $padding: 6px 16px, $font-size: 0.875rem) {
+  display: inline-flex;
+  align-items: center;
+  padding: $padding;
+  border-radius: 24px;
+  font-size: $font-size;
+  font-weight: 500;
+  background-color: $bg-color;
+  color: $text-color;
+}

@@ -1,0 +1,61 @@
+@import '../variables';
+
+// Card Base Styles
+@mixin card-base {
+  background: $bg-primary;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  transition: all $transition-normal;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Card Sizes
+@mixin card-size($size) {
+  @if $size == small {
+    padding: $spacing-lg;
+  } @else if $size == medium {
+    padding: $spacing-xl;
+  } @else if $size == large {
+    padding: $spacing-2xl;
+  }
+}
+
+// Card Variants
+@mixin card-variant($variant) {
+  @if $variant == default {
+    border: 1px solid $border-color;
+  } @else if $variant == elevated {
+    box-shadow: $shadow-lg;
+  } @else if $variant == outlined {
+    background: transparent;
+    border: 2px solid $border-color;
+    box-shadow: none;
+  }
+}
+
+// Card Content Areas
+@mixin card-header {
+  padding-bottom: $spacing-lg;
+  border-bottom: 1px solid $border-color;
+}
+
+@mixin card-body {
+  padding: $spacing-lg 0;
+}
+
+@mixin card-footer {
+  padding-top: $spacing-lg;
+  border-top: 1px solid $border-color;
+}
+
+@mixin card($variant: default, $size: medium) {
+  @include card-base;
+  @include card-size($size);
+  @include card-variant($variant);
+}

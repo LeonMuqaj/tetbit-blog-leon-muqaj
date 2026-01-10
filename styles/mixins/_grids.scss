@@ -1,0 +1,15 @@
+@import '../variables';
+
+@mixin responsive-grid($columns: 3, $row-gap: 56px, $column-gap: 32px, $tablet-columns: 2, $mobile-columns: 1) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $row-gap $column-gap;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat($tablet-columns, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat($mobile-columns, 1fr);
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "navbar": {
+    "forEmployers": "Für Arbeitgeber",
+    "forRecruiters": "Für Online-Recruiter",
+    "forApplicants": "Für Bewerber",
+    "aboutUs": "Über uns",
+    "blog": "Blog",
+    "allJobs": "ALLE JOBS",
+    "favorites": "Favoriten",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "welcome": "Willkommen",
+    "notLoggedIn": "Sie sind nicht angemeldet"
+  },
+  "hero": {
+    "title": "Blogs von unseren Experten",
+    "subtitle": "Hier finden Sie wertvolle Einblicke zu Themen wie Recruiting, Arbeitsmarkt, Karriere und vielen anderen Bereichen.",
+    "all": "Alle",
+    "blog": "Blog",
+    "news": "Nachrichten",
+    "tutorial": "Tutorial",
+    "opinion": "Meinung"
+  },
+  "homepage": {
+    "loadingMore": "Weitere Beiträge werden geladen..."
+  },
+  "footer": {
+    "aboutUs": "Über uns",
+    "aboutDescription": "Tetbit Blog ist Ihre Anlaufstelle für Einblicke in Karriere, Recruiting und berufliche Entwicklung.",
+    "quickLinks": "Schnelllinks",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "categories": "Kategorien",
+    "forEmployers": "Für Arbeitgeber",
+    "forRecruiters": "Für Recruiter",
+    "forApplicants": "Für Bewerber",
+    "followUs": "Folgen Sie uns",
+    "copyright": "© 2025 Tetbit Blog. Alle Rechte vorbehalten."
+  },
+  "blogPost": {
+    "minRead": "5 Min. Lesezeit",
+    "author": "Autor",
+    "publishedOn": "Veröffentlicht am",
+    "copyLink": "Link kopieren",
+    "unknownAuthor": "Unbekannter Autor",
+    "writer": "Autor",
+    "relatedBlogs": "Ähnliche Blogs",
+    "postNotFound": "Beitrag nicht gefunden",
+    "postNotFoundMessage": "Der gesuchte Beitrag existiert nicht oder wurde entfernt."
+  },
+  "search": {
+    "placeholder": "Artikel suchen...",
+    "button": "Suchen",
+    "noResults": "Keine passenden Beiträge gefunden"
+  },
+  "postCard": {
+    "readMore": "Weiterlesen",
+    "minRead": "5 Min. Lesezeit",
+    "types": {
+      "Blog": "Blog",
+      "News": "Nachrichten",
+      "Tutorial": "Tutorial",
+      "Opinion": "Meinung"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Seite nicht gefunden",
+      "message": "Die gesuchte Seite existiert nicht oder wurde verschoben."
+    },
+    "search-not-found": {
+      "title": "Keine Ergebnisse gefunden",
+      "message": "Wir konnten keine Beiträge zu Ihrer Suche finden. Versuchen Sie andere Suchbegriffe.",
+      "messageWithQuery": "Keine Beiträge für \"[[query]]\" gefunden. Versuchen Sie andere Suchbegriffe."
+    },
+    "bad-request": {
+      "title": "Fehlerhafte Anfrage",
+      "message": "Bei Ihrer Anfrage ist etwas schiefgelaufen. Bitte überprüfen und erneut versuchen."
+    },
+    "server-error": {
+      "title": "Serverfehler",
+      "message": "Unsere Server haben derzeit Probleme. Bitte versuchen Sie es in einigen Momenten erneut."
+    },
+    "network-error": {
+      "title": "Verbindung unterbrochen",
+      "message": "Keine Verbindung zum Server möglich. Bitte überprüfen Sie Ihre Internetverbindung."
+    },
+    "unauthorized": {
+      "title": "Zugriff verweigert",
+      "message": "Sie müssen angemeldet sein, um diesen Inhalt anzuzeigen."
+    },
+    "forbidden": {
+      "title": "Verboten",
+      "message": "Sie haben keine Berechtigung, auf diese Ressource zuzugreifen."
+    },
+    "timeout": {
+      "title": "Zeitüberschreitung",
+      "message": "Die Anfrage hat zu lange gedauert. Bitte versuchen Sie es erneut."
+    },
+    "generic": {
+      "title": "Etwas ist schiefgelaufen",
+      "message": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+    },
+    "retry": "Erneut versuchen",
+    "goHome": "Zur Startseite"
+  }
+}

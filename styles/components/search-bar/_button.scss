@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.search-bar {
+  &__button {
+    height: $search-bar-height;
+    padding: 0 0.85rem;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: #fff;
+    background: $brand-navy;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    box-shadow:
+      0 2px 4px -1px rgba(30, 58, 95, 0.3),
+      0 1px 2px -1px rgba(30, 58, 95, 0.2);
+
+    &:hover {
+      background: darken($brand-navy, 5%);
+      box-shadow:
+        0 4px 8px -2px rgba(30, 58, 95, 0.4),
+        0 2px 4px -2px rgba(30, 58, 95, 0.3);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.25);
+    }
+
+    &:active {
+      background: darken($brand-navy, 8%);
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import '../variables';
+@import '../mixins/navbar-hamburger';
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: $bg-cream;
+  box-shadow: $shadow-sm;
+  padding: 0;
+  
+  &__container {
+    padding: 0.875rem 32px;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    img {
+      height: auto;
+      width: auto;
+      border-radius: 8px;
+    }
+  }
+
+  &__title {
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: $brand-navy;
+    letter-spacing: -0.025em;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+
+    // Desktop only - hide on mobile
+    &--desktop {
+      @media (max-width: 640px) {
+        display: none;
+        padding: 32px 40px;
+      }
+    }
+  }
+
+  // Include hamburger menu styles from mixin
+  @include navbar-hamburger;
+}
+
+// Note: @keyframes fadeIn and slideDown are imported globally via mixins/_animations.scss
+
+// ===========================================
+// MOBILE RESPONSIVE (600px and below)
+// ===========================================
+@media (max-width: 600px) {
+  .navbar {
+    &__container {
+      padding: 0.70rem 20px;
+    }
+
+    &__title {
+      font-size: 1.375rem;
+    }
+
+    &__brand {
+      gap: 0.625rem;
+
+      img {
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+// ===========================================
+// SMALL MOBILE RESPONSIVE (400px and below)
+// ===========================================
+@media (max-width: 400px) {
+  .navbar {
+    &__container {
+      padding: 0.5rem 20px;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+

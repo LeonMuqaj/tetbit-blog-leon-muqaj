@@ -1,0 +1,42 @@
+/* Desktop Responsive Styles */
+/* Extra Large screens (1400px and below) and Large screens (1200px and below) */
+
+/* Extra Large screens (1400px and below) */
+@media (max-width: 1400px) {
+  .blog-post {
+    &__container {
+      max-width: 1000px;
+      
+    }
+
+    &__content {
+      max-width: 700px;
+    }
+  }
+}
+
+/* Large screens / Small desktops (1200px and below) */
+@media (max-width: 1200px) {
+  .blog-post {
+    &__container {
+      max-width: 900px;
+      padding: 32px 32px; // Aligned with navbar/hero/homepage (32px horizontal)
+    }
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__related-list {
+      gap: 32px;
+
+      .post-card__image-container {
+        height: 280px;
+      }
+    }
+  }
+}

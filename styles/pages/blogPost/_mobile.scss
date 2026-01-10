@@ -1,0 +1,281 @@
+/* Mobile Responsive Styles */
+/* Covers 600px and 400px breakpoints */
+
+@import '../../mixins/avatars';
+
+/* Mobile devices (600px and below) */
+@media (max-width: 600px) {
+  .blog-post {
+    padding-bottom: 60px;
+
+    &__container {
+      padding: 32px 20px; // Aligned with navbar/hero/homepage (20px horizontal)
+    }
+
+    &__header {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    &__intro {
+      font-size: 0.95rem;
+    }
+
+    &__tags {
+      gap: 6px;
+      margin-bottom: 16px;
+      padding: 3px 8px 3px 3px;
+    }
+
+    &__tag {
+      padding: 3px 8px;
+      font-size: 0.6rem;
+
+      &--time {
+        font-size: 0.7rem;
+      }
+    }
+
+    &__image-section {
+      margin-bottom: 32px;
+    }
+
+    &__hero {
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    &__hero-image {
+      border-radius: 8px;
+    }
+
+    // Mobile layout: Stack published info and share buttons vertically
+    &__share-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    &__published {
+      width: 100%;
+    }
+
+    &__published-label {
+      font-size: 0.8rem;
+    }
+
+    &__published-date {
+      font-size: 0.9rem;
+    }
+
+    &__share-buttons {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    &__copy-link-btn {
+      padding: 6px 10px;
+      font-size: 0.75rem;
+      gap: 4px;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &__share-icon {
+      width: 32px;
+      height: 32px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &__author-wrapper {
+      gap: 16px;
+      padding-bottom: 20px;
+    }
+
+    &__author-label {
+      gap: 12px;
+      padding: 0;
+    }
+
+    &__author-avatar {
+      @include avatar(40px);
+    }
+
+    &__author-initial {
+      font-size: 1rem;
+    }
+
+    &__author-text {
+      font-size: 0.7rem;
+    }
+
+    &__author-name {
+      font-size: 0.9rem;
+    }
+
+    &__author-role {
+      font-size: 0.75rem;
+    }
+
+    &__paragraph {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    &__related {
+      margin-top: 48px;
+      padding-top: 32px;
+    }
+
+    &__related-title {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+
+    &__related-list {
+      gap: 32px;
+
+      .post-card__image-container {
+        height: 240px;
+      }
+    }
+  }
+}
+
+/* Small mobile devices (400px and below) */
+@media (max-width: 400px) {
+  .blog-post {
+    &__container {
+      padding: 20px 20px 32px; // Aligned with navbar/hero/homepage (20px horizontal)
+    }
+
+    &__title {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    &__intro {
+      font-size: 0.9rem;
+    }
+
+    &__tags {
+      gap: 4px;
+      margin-bottom: 12px;
+      padding: 2px 6px 2px 2px;
+    }
+
+    &__tag {
+      padding: 2px 6px;
+      font-size: 0.5rem;
+
+      &--time {
+        font-size: 0.6rem;
+      }
+    }
+
+    &__hero {
+      border-radius: 6px;
+    }
+
+    &__hero-image {
+      border-radius: 6px;
+    }
+
+    &__share-wrapper {
+      gap: 12px;
+    }
+
+    &__published-label {
+      font-size: 0.7rem;
+    }
+
+    &__published-date {
+      font-size: 0.8rem;
+    }
+
+    &__share-buttons {
+      gap: 4px;
+    }
+
+    &__copy-link-btn {
+      padding: 5px 8px;
+      font-size: 0.7rem;
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &__share-icon {
+      width: 28px;
+      height: 28px;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &__author-wrapper {
+      gap: 12px;
+      padding-bottom: 16px;
+    }
+
+    &__author-avatar {
+      @include avatar(36px);
+    }
+
+    &__author-initial {
+      font-size: 0.9rem;
+    }
+
+    &__author-text {
+      font-size: 0.65rem;
+    }
+
+    &__author-name {
+      font-size: 0.85rem;
+    }
+
+    &__author-role {
+      font-size: 0.7rem;
+    }
+
+    &__paragraph {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    &__related {
+      margin-top: 40px;
+      padding-top: 24px;
+    }
+
+    &__related-title {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+
+    &__related-list {
+      gap: 28px;
+
+      .post-card__image-container {
+        height: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import '../variables';
+
+.homepage {
+  padding: 40px 32px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: $bg-cream;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 32px; // row-gap column-gap
+
+    // Tablet landscape - 2 columns
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 24px;
+    }
+
+    // Tablet portrait and below - 1 column
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    font-size: 1.25rem;
+    color: $gray-500;
+  }
+
+  &__empty-state {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// ===========================================
+// MOBILE RESPONSIVE (600px and below)
+// ===========================================
+@media (max-width: 600px) {
+  .homepage {
+    padding: 24px 20px;
+  }
+}
+
+// ===========================================
+// SMALL MOBILE RESPONSIVE (400px and below)
+// ===========================================
+@media (max-width: 400px) {
+  .homepage {
+    padding: 24px 20px;
+  }
+}

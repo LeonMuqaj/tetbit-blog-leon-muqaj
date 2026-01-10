@@ -1,0 +1,95 @@
+@import '../variables';
+
+// Button Base Styles
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: $font-weight-medium;
+  border: none;
+  border-radius: $border-radius-full;
+  cursor: pointer;
+  transition: all $transition-normal;
+  text-decoration: none;
+  box-shadow: $shadow-sm;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: $shadow-md, 0 0 0 3px rgba($primary-color, 0.1);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+
+    &:hover {
+      transform: none;
+      box-shadow: $shadow-sm;
+    }
+  }
+}
+
+// Button Sizes
+@mixin button-size($size) {
+  @if $size == small {
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-sm;
+    min-height: 2.25rem;
+  } @else if $size == medium {
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-base;
+    min-height: 2.5rem;
+  } @else if $size == large {
+    padding: $spacing-lg $spacing-2xl;
+    font-size: $font-size-lg;
+    min-height: 3rem;
+  }
+}
+
+// Button Variants
+@mixin button-variant($variant) {
+  @if $variant == primary {
+    color: $white;
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(135deg, darken($primary-color, 10%) 0%, darken($secondary-color, 10%) 100%);
+      box-shadow: $shadow-lg;
+    }
+  } @else if $variant == secondary {
+    color: $text-primary;
+    background: $bg-primary;
+    border: 2px solid $border-color;
+
+    &:hover:not(:disabled) {
+      border-color: $primary-color;
+      color: $primary-color;
+      box-shadow: $shadow-md;
+    }
+  } @else if $variant == accent {
+    color: $white;
+    background: linear-gradient(135deg, $accent-color 0%, darken($accent-color, 10%) 100%);
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(135deg, darken($accent-color, 15%) 0%, darken($accent-color, 25%) 100%);
+      box-shadow: $shadow-lg;
+    }
+  }
+}
+
+@mixin button($variant: primary, $size: medium) {
+  @include button-base;
+  @include button-size($size);
+  @include button-variant($variant);
+}

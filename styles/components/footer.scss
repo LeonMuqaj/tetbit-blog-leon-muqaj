@@ -1,0 +1,38 @@
+@import '../variables';
+
+.footer {
+  background: $bg-cream;
+  color: $gray-700;
+  padding: 2rem 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: inherit;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 6rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+ 
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    flex: 1;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+  }
+}

@@ -1,0 +1,49 @@
+/* Desktop Responsive Design */
+
+/* Extra Large screens (1400px and below) */
+@media (max-width: 1400px) {
+  .navbar {
+    &__container {
+      padding: 0.875rem 48px;
+    }
+  }
+
+  .hero {
+    padding: 40px 48px;
+  }
+
+  .homepage {
+    padding: 40px 48px;
+  }
+}
+
+/* Large screens / Small desktops (1200px and below) */
+@media (max-width: 1200px) {
+  .navbar {
+    &__container {
+      padding: 0.875rem 40px;
+    }
+  }
+
+  .hero {
+    padding: 36px 40px;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.35rem;
+    }
+  }
+
+  .homepage {
+    padding: 36px 40px;
+  }
+
+  .post-card {
+    &__image-container {
+      height: 260px;
+    }
+  }
+}

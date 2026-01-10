@@ -1,0 +1,8 @@
+- [x] Convert Homepage.tsx to client component by adding 'use client';
+- [x] Add imports for useState, useEffect, useCallback from 'react'
+- [x] Define state variables: allPosts, loadedPosts, loading, hasMore
+- [x] Implement useEffect to fetch all posts, assign types, filter, and set initial loadedPosts
+- [x] Implement loadMore function to append next 15 posts
+- [x] Add scroll event listener in useEffect to trigger loadMore when near bottom
+- [x] Update render to use loadedPosts instead of paginatedPosts and remove pagination div
+- [x] Remove old pagination-related logic (currentPage, totalPages, etc.)
