@@ -16,8 +16,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tetbit-blog.com"), // Replace with your actual domain
+  icons: {
+    icon: [
+      {
+        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>",
+        type: "image/svg+xml",
+      },
+    ],
+  },
   title: {
-    default: "Tetbit Blog - Intern Checklist",
+    default: "Tetbit Blog",
     template: "%s | Tetbit Blog",
   },
   description:

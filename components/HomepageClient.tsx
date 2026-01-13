@@ -27,6 +27,7 @@ interface HomepageClientProps {
     searchNotFoundWithQuery: string;
   };
   isSearchTriggered?: boolean;
+  authors: string[];
 }
 
 function HomepageClient({
@@ -36,6 +37,7 @@ function HomepageClient({
   searchQuery,
   translations,
   isSearchTriggered = false,
+  authors,
 }: HomepageClientProps) {
   const postsPerPage = 15;
 

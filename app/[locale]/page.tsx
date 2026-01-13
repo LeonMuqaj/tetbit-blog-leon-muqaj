@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import HomepageClient from "@/components/HomepageClient";
 import Hero from "@/components/Hero";
 import { getTranslations } from "next-intl/server";
+import { fetchAuthors } from "@/utils/authorUtils";
 
 interface Post {
   id: number;
@@ -62,6 +63,7 @@ export default async function Home({ params, searchParams }: PageProps) {
   const isSearchTriggered = !!queryParams.t;
 
   const allPostsWithTypes = await fetchPosts();
+  const authors = await fetchAuthors();
 
   let filteredPosts =
     selectedTypes.length === 0
@@ -98,6 +100,7 @@ export default async function Home({ params, searchParams }: PageProps) {
         searchQuery={searchQuery}
         translations={translations}
         isSearchTriggered={isSearchTriggered}
+        authors={authors}
       />
       <Footer />
     </>
