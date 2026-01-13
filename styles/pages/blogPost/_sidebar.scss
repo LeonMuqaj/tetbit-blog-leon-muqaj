@@ -1,0 +1,237 @@
+@import '../../variables';
+
+.blog-post {
+  &__sidebar {
+    align-self: start;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  &__sidebar-widget {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid $gray-400; 
+
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__sidebar-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin: 0 0 24px;
+    color: $black;
+    line-height: 1;
+  }
+
+  &__author-card {
+    display: flex;
+    gap: 16px;
+    align-items: center; 
+  }
+
+  &__author-image {
+    width: 48px; 
+    height: 48px; 
+    object-fit: cover;
+    border-radius: 4px; 
+    flex-shrink: 0;
+  }
+
+  &__author-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  &__author-name-large {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $black; 
+    line-height: 1.2;
+    display: block; 
+  }
+
+  &__author-role {
+    font-size: 0.85rem;
+    color: $gray-700; 
+    display: block; 
+    line-height: 1.4;
+  }
+  
+  &__featured-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__featured-image {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  &__featured-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  &__featured-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $black;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+    display: inline;
+    transition: background-color 0.2s ease;
+    padding: 2px 0;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    .blog-post__featured-card:hover & {
+      background-color: #FFC045;
+    }
+  }
+
+  &__featured-meta {
+    font-size: 0.875rem;
+    color: $black;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__featured-separator {
+    color: $gray-600;
+  }
+  &__recent-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__recent-item {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $gray-400; 
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__recent-link {
+    display: block;
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__recent-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $black;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    display: inline;
+    transition: background-color 0.2s ease;
+    padding: 2px 0;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    .blog-post__recent-link:hover & {
+      background-color: #FFC045;
+    }
+  }
+
+  &__recent-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    color: $black;
+    margin-top: 10px;
+  }
+
+  &__recent-separator {
+    color: $gray-600;
+  }
+
+  &__share-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    .blog-post__share-icon {
+        color: $black; 
+        &:hover {
+            opacity: 0.7;
+            background-color: $gray-100;
+        }
+    }
+  }
+
+  &__copy-link-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background-color: transparent;
+    border: 1px solid $gray-400; 
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $black; 
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    &:hover {
+      background-color: $gray-100;
+      border-color: $gray-500;
+      color: $black;
+    }
+
+    svg {
+      color: $black; 
+    }
+  }
+
+
+  &__share-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: $gray-400;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: $gray-50;
+      color: $text-primary;
+    }
+  }
+}
