@@ -3,6 +3,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "../globals.css";
 import "../../styles/globals.scss";
 
@@ -101,6 +102,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
